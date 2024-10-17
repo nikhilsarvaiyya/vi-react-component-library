@@ -1,0 +1,49 @@
+.vi-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.vi-table th{
+    font-weight: bold;
+}
+
+.vi-table th,
+.vi-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.vi-table.small th,
+.vi-table.small td {
+    padding: 4px;
+    font-size: 14px;
+}
+
+.vi-table.medium th,
+.vi-table.medium td {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.vi-table.large th,
+.vi-table.large td {
+    padding: 10px;
+    font-size: 18px;
+}
+.vi-table.strip th,
+.vi-table.strip td {
+    border: 1px dashed #ddd;
+}
+
+
+.vi-table.oddeven tr:nth-of-type(odd) {
+    background-color: #4C8BF5;
+    color: #fff;
+  } 
+
+.vi-table.vertical-divider th,
+.vi-table.vertical-divider td {
+    border:none;
+    border-bottom: 1px solid #ddd;
+}

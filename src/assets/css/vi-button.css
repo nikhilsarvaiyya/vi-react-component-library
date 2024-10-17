@@ -1,0 +1,77 @@
+.viButtonStyle {
+    margin: 8px 8px 8px 0px;
+    display: inline-block
+}
+
+.vi-button {
+    border: none;
+    padding: 6px 16px;
+    display: inline-block;
+    background-color: #1976D2;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px 6px;
+}
+
+
+
+.vi-button:hover{
+    opacity: 0.7;
+    border-radius: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
+}
+.vi-button:visited{
+    opacity: 0.7;
+}
+.vi-button:focus {
+   
+}
+
+.small {
+    padding: 4px 12px;
+}
+
+.medium {
+    padding: 8px 20px;
+}
+
+.large {
+    padding: 10px 24px;
+}
+
+.red {
+    background-color: #D32F2F;
+}
+
+.green {
+    background-color: #33691E;
+}
+
+.blue {
+    background-color: #1976D2;
+}
+
+.yellow {
+    background-color: #FFD600;
+    color: #ffffff;
+}
+
+.orange {
+    background-color: #F4511E;
+}
+
+.black {
+    background-color: black;
+}
+
+.gray {
+    background-color: #546E7A;
+}
+
+.brown {
+    background-color: #6D4C41;
+}
+

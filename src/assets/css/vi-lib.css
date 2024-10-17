@@ -1,13 +1,14 @@
-:root {
-    --light-bg: #bedfff;
-    --dark-bg: #2f362a;
-    --light-text: #bedfff;
-    --dark-text: #2f362a;
-}
+/* :root {
+    --light-bg: #ffffff;
+    --dark-bg: #006064;
+    --light-text: #ffffff;
+    --dark-text: #006064;
+} */
 
-* {
-    box-sizing: border-box;
-}
+@import url('./vi-button.css');
+@import url('./vi-table.css');
+
+* {    box-sizing: border-box;}
 
 html,
 body,
@@ -135,7 +136,19 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+a{   
+    color: var(--dark-text);
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.7;
+}
 
+h1{
+    padding: 8px 0;
+    font-weight: bold;
+    
+}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -143,6 +156,7 @@ body {
     color: var(--dark-text);
     line-height: 1;
     height: 100vh;
+    font-size: 14px;
 }
 
 /* Fixed sidenav, full height */
@@ -165,7 +179,7 @@ body {
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    
     color: var(--dark-text);
     display: block;
     border: none;
@@ -178,21 +192,20 @@ body {
 }
 
 /* On mouse-over */
-.sidenav a:hover,
-.dropdown-btn:hover {
-    opacity: 0.7;
-}
+
 
 /* Main content */
 .main {
     margin-left: 200px;
     /* Same as the width of the sidenav */
-    font-size: 20px;
+  
     /* Increased text to enable scrolling */
-    padding: 0;
+    padding: 0 0 10px 0;
 }
 
 .pageHead {
+    position: sticky;
+    top:0;
     background: var(--light-bg);
     color: var(--dark-text);
     padding: 12px;
@@ -209,8 +222,38 @@ body {
     font-size: 28px;
     font-weight: 700;
     flex: auto;
+    
 }
+
 
 .pageHead .right-menu{
 
+}
+
+.displayCode{
+    width:100%;
+    background:rgb(239, 239, 239);
+    min-height:60px;
+    border-radius:5px;
+    padding:30px 20px;
+   
+}
+.componentCard{
+    background: white;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+    border-bottom: 3px solid #8dd9ff;
+}
+.componentCard .title h1{
+    padding:14px;
+    border-bottom: 3px solid #8dd9ff;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+}
+.componentCard .child{
+    padding:14px ;
+   
+}
+.componentCard .display{
+    padding:7px;
 }
