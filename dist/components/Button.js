@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-const Button = props => {
+const VIButton = props => {
   return /*#__PURE__*/_react.default.createElement("button", {
-    className: `btn btn-${props.kind} CTA`,
+    className: `${props.css}`,
     "data-id": props.id,
     type: props.type,
     name: props.name,
@@ -17,4 +17,4 @@ const Button = props => {
     onClick: props.handleClick
   }, /*#__PURE__*/_react.default.createElement("h4", null, props.label));
 };
-var _default = exports.default = Button;
+var _default = exports.default = VIButton;
