@@ -1,16 +1,23 @@
 
 
 const ComponentCard = (props) => {
-  console.log(props)
-  let t = props.title ? <div className="title"><h1>{props.title}</h1></div> : ""
-  let c = props.children ? <div className="child">{props.children}</div> : ""
-  let d = props.display ? <div className="display"><div className="displayCode" > {props.display} </div></div> : "";
+
+  let icon = props.display ? <>
+        <input type="checkbox" id={props.title}/>
+        <label className="material-symbols-outlined" htmlFor={props.title}>
+          code
+        </label>
+      </> : ""
+  let title = props.title ? <h1 className="title">{props.title}</h1> : ""
+  let children = props.children ? <div className="child">{props.children}</div> : "";
+  let code = props.display ? <div className="display accordian-content"><div className="displayCode poppins-light-italic" > {props.display} </div></div> : "";
 
   return (
-    <div className="componentCard">
-      {t}
-      {c}
-      {d}
+    <div className="componentCard accordian">
+        {icon}
+        {title}
+        {children}
+        {code}
     </div>
   )
 };

@@ -7,11 +7,10 @@
     border: none;
     padding: 6px 16px;
     display: inline-block;
-    background-color: #1976D2;
-    color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
     margin: 4px 6px;
+    box-shadow: 0px 0px 1px var(--clr-9);
 }
 
 
@@ -20,7 +19,7 @@
     opacity: 0.7;
     border-radius: 0;
     transition-duration: 0.3s;
-    transition-timing-function: linear;
+    transition-timing-function: easy;
 
 }
 .vi-button:visited{
@@ -44,14 +43,17 @@
 
 .red {
     background-color: #D32F2F;
+    color: #ffffff;
 }
 
 .green {
     background-color: #33691E;
+    color: #ffffff;
 }
 
 .blue {
     background-color: #1976D2;
+    color: #ffffff;
 }
 
 .yellow {
@@ -61,17 +63,21 @@
 
 .orange {
     background-color: #F4511E;
+    color: #ffffff;
 }
 
 .black {
     background-color: black;
+    color: #ffffff;
 }
 
 .gray {
     background-color: #546E7A;
+    color: #ffffff;
 }
 
 .brown {
     background-color: #6D4C41;
+    color: #ffffff;
 }
 

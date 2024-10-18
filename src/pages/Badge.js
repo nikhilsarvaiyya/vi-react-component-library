@@ -1,5 +1,8 @@
+import { VIBadge } from "../lib";
+
+
 const Badge = () => {
-    return <h1>Badge Articles</h1>;
+    return <VIBadge />;
   };
   
   export default Badge;

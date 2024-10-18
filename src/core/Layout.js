@@ -1,52 +1,47 @@
 import { Outlet, Link } from "react-router-dom";
-
-let initialTheme = true;
-
-function toggleColors() {
-    const root = document.documentElement;
-    console.log(initialTheme)
-    if (initialTheme) {
-        root.style.setProperty('--light-bg', '#ECEFF1');
-        root.style.setProperty('--dark-bg', '#212121');
-        root.style.setProperty('--light-text', '#ECEFF1');
-        root.style.setProperty('--dark-text', '#212121');
-        localStorage.setItem("theme", "light")
-        initialTheme = false;
-    } else {
-        root.style.setProperty('--light-bg', '#212121');
-        root.style.setProperty('--dark-bg', '#ECEFF1');
-        root.style.setProperty('--light-text', '#212121');
-        root.style.setProperty('--dark-text', '#ECEFF1');
-        localStorage.setItem("theme", "dark")
-        initialTheme = true;
-    }
+import theme from "../assets/js/theme";
+let setTheme = ''
+function toggleColors(e) {
+    localStorage.setItem('theme',e.target.value)
+    setTheme = e.target.value
+    theme(e.target.value)
 }
 
 const Layout = (props) => {
-    toggleColors()
-    
-    const MenuBar = props.menu.filter(f => f.name !== "NoPage").map((item, i) => {
-        return <Link to={'/' + item.path}>{item.name}</Link>
+    let t = localStorage.getItem('theme');
+    theme(t);
+    setTheme = t;
+
+    const MenuBar = props.menu.filter((f,i) => f.name !== "NoPage").map((item, i) => {
+        return <Link key={i} to={'/' + item.path}>{item.name}</Link>
     })
 
     return (
         <div >
             <h1 className="pageHead h-60" style={{ display: "flex" }}>
                 <div className="logo">
-                    <Link to='/'>Logo</Link>
+                    <Link to='/'>VNI</Link>
                 </div>
                 <div className="right-menu" >
-                    <button onClick={toggleColors}>Theme</button>
+                <select onChange={(e) => toggleColors(e)} value={setTheme}>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="gray">Light</option>
+                    <option value="black">Dark</option>
+                    {/* <option value="white">White</option> */}
+                </select>
+                  
                 </div>
 
             </h1>
             <div className="sidenav">
-               
                 {MenuBar}
             </div>
 
             <div className="main">
-
                 <div style={{ margin: "20px" }}>
                      
                     <Outlet />

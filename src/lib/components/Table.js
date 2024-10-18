@@ -1,6 +1,6 @@
 import React from 'react';
 const VITable = (props) => {
-    console.log(props)
+    
     return (
         <table className={`vi-table ${props.size} ${props.type}`}>
             <tr>

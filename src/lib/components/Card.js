@@ -2,7 +2,7 @@ import React from 'react';
 const VICard = (props) => {
    return (
       <>
-        Card Lib
+       Card WIP
       </>
      )
 }

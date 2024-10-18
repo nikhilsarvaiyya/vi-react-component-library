@@ -5,22 +5,18 @@ import { VIButton } from "../lib";
 const Button = () => {
   let arr = ['red', 'green', 'blue', 'orange', 'black', 'yellow', 'brown', 'gray'];
 
-  var viewHtml = arr.map((item, i) => <div>{'<VIButton color="' + item + '"/>'}</div>);
-  var viewDesign = arr.map((item, i) => <VIButton color={item} />);
+  var viewHtml = arr.map((item, i) => <div>{'<VIButton key="' + i + '" color="' + item + '"/>'}</div>);
+  var viewDesign = arr.map((item, i) => <VIButton key={i} color={item} />);
 
-  var viewSmallDesign = arr.map((item, i) => <VIButton color={item} size="small"/>);
-  var viewNormalDesign = arr.map((item, i) => <VIButton color={item} />);
-  var viewMediumDesign = arr.map((item, i) => <VIButton color={item} size="medium"/>);
-  var viewLargeDesign = arr.map((item, i) => <VIButton color={item} size="large" />);
+  var viewSmallDesign = arr.map((item, i) => <VIButton key={i} color={item} size="small"/>);
+  var viewNormalDesign = arr.map((item, i) => <VIButton key={i} color={item} />);
+  var viewMediumDesign = arr.map((item, i) => <VIButton key={i} color={item} size="medium"/>);
+  var viewLargeDesign = arr.map((item, i) => <VIButton key={i} color={item} size="large" />);
 
 
   return (
     <>
-      <ComponentCard
-        title="Example"
-        display="<VIButton color='orange' size='small' label='Submit'/>">
-        <VIButton color="orange" label="Submit" />
-      </ComponentCard>
+
 
       <ComponentCard
         title="Default Button"

@@ -11,7 +11,7 @@
 .vi-table td {
     padding: 8px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid var(--clr-1);
 }
 
 .vi-table.small th,
@@ -33,17 +33,17 @@
 }
 .vi-table.strip th,
 .vi-table.strip td {
-    border: 1px dashed #ddd;
+    border: 1px dashed var(--clr-9);
 }
 
 
 .vi-table.oddeven tr:nth-of-type(odd) {
-    background-color: #4C8BF5;
-    color: #fff;
+    background-color: var(--clr-4);
+    
   } 
 
 .vi-table.vertical-divider th,
 .vi-table.vertical-divider td {
     border:none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--clr-8);
 }

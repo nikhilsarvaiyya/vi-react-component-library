@@ -17,7 +17,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout menu={menu}  />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home menu={menu}/>} />
           {MenuBar}
         </Route>
       </Routes>

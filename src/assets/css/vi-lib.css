@@ -1,14 +1,12 @@
-/* :root {
-    --light-bg: #ffffff;
-    --dark-bg: #006064;
-    --light-text: #ffffff;
-    --dark-text: #006064;
-} */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=code');
 @import url('./vi-button.css');
 @import url('./vi-table.css');
 
-* {    box-sizing: border-box;}
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body,
@@ -136,27 +134,147 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-a{   
-    color: var(--dark-text);
+
+a {
+    color: var(--text-color);
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
 }
 
-h1{
+h1 {
     padding: 8px 0;
     font-weight: bold;
-    
+
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: var(--light-bg);
-    color: var(--dark-text);
+    background-color: var(--clr-7);
+    color: var(--text-color);
     line-height: 1;
     height: 100vh;
     font-size: 14px;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
 }
 
 /* Fixed sidenav, full height */
@@ -166,21 +284,20 @@ body {
     position: fixed;
     z-index: 1;
     top: 60px;
-    left: 0;
-    background: var(--light-bg);
-    color: var(--dark-text);
+    left: 0; 
+    background: var(--clr-7);;
     overflow-x: hidden;
-    box-shadow: 2px 5px 7px var(--dark-bg);
+    box-shadow: -2px 4px 7px 1px var(--clr-9);
+    border-right: 1px solid var(--clr-8);
 
 
 }
 
 /* Style the sidenav links and the dropdown button */
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+    padding: 10px;
     text-decoration: none;
     
-    color: var(--dark-text);
     display: block;
     border: none;
     background: none;
@@ -188,7 +305,7 @@ body {
     text-align: left;
     cursor: pointer;
     outline: none;
-    border-bottom: 1px solid var(--dark-text);
+    border-bottom: 1px solid var(--clr-8);
 }
 
 /* On mouse-over */
@@ -198,19 +315,21 @@ body {
 .main {
     margin-left: 200px;
     /* Same as the width of the sidenav */
-  
+
     /* Increased text to enable scrolling */
     padding: 0 0 10px 0;
 }
 
 .pageHead {
     position: sticky;
-    top:0;
-    background: var(--light-bg);
-    color: var(--dark-text);
+    top: 0;
+    background: var(--clr-9); 
     padding: 12px;
     vertical-align: middle;
-    border-bottom: 1px solid var(--dark-text);
+    border-bottom: 1px solid var(--clr-8);
+    box-shadow: 0px 2px 14px -10px var(--clr-9);
+
+    z-index: 2;
 
 }
 
@@ -218,42 +337,82 @@ body {
     height: 60px;
 }
 
-.pageHead .logo{
-    font-size: 28px;
+.pageHead .logo {
+    font-size: 36px;
     font-weight: 700;
     flex: auto;
-    
-}
-
-
-.pageHead .right-menu{
 
 }
 
-.displayCode{
-    width:100%;
-    background:rgb(239, 239, 239);
-    min-height:60px;
-    border-radius:5px;
-    padding:30px 20px;
-   
+
+.pageHead .right-menu {}
+.pageHead .right-menu select {
+    padding: 8px 15px;
 }
-.componentCard{
-    background: white;
+
+
+.componentCard {
+    background: var(--clr-7);
     margin: 0 0 20px 0;
-    border-radius: 4px;
-    border-bottom: 3px solid #8dd9ff;
+
+    border-bottom: 3px solid var(--clr-8);
+    border: 1px solid var(--clr-9);
 }
-.componentCard .title h1{
-    padding:14px;
-    border-bottom: 3px solid #8dd9ff;
-    background-color: var(--dark-bg);
-    color: var(--light-text);
-}
-.componentCard .child{
-    padding:14px ;
+
+.componentCard h1.title {
+    padding: 14px;
+    border-bottom: 1px solid var(--clr-8);
+    background: var(--clr-8);
    
 }
-.componentCard .display{
-    padding:7px;
+
+.componentCard .child {
+    padding: 14px;
+}
+
+.componentCard .display {}
+
+.componentCard .displayCode {
+    width: 100%;
+    background: var(--clr-9);
+   
+    min-height: 60px;
+    padding: 30px 20px;
+    border-top: 1px solid var(--clr-8);
+}
+
+div.accordian {
+    position: relative;
+}
+
+.accordian input {
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    height: 20px;
+    width: 20px;
+    opacity: 0;
+    visibility: 0;
+}
+
+.accordian label {
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.accordian label:hover {
+    opacity: 0.7;
+}
+
+
+.accordian div.accordian-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+.accordian input:checked~.accordian-content {
+    max-height: 600px;
 }
