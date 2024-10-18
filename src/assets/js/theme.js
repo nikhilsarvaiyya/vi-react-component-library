@@ -97,7 +97,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', gray['7']);
         root.style.setProperty('--clr-8', gray['8']);
         root.style.setProperty('--clr-9', gray['9']);
-        root.style.setProperty('--text-color', black[0]);
+        root.style.setProperty('--text-color', black[9]);
         localStorage.setItem("theme", "gray");
     } else if (theme === "black") {
         root.style.setProperty('--clr-1', black['1']);

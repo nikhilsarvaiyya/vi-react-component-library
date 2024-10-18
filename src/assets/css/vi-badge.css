@@ -1,0 +1,14 @@
+.vi-button-tip {
+   position: relative;
+}
+.vi-button-tip span{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    background: #ffffff;
+    padding: 3px;
+    border-radius: 19px;
+    font-size: 84%;
+    min-width: 20px;
+    height: 20px;
+}

@@ -3,8 +3,8 @@
 const ComponentCard = (props) => {
 
   let icon = props.display ? <>
-        <input type="checkbox" id={props.title}/>
-        <label className="material-symbols-outlined" htmlFor={props.title}>
+        <input type="checkbox" className="acc-toggle-checkbox" id={props.title}/>
+        <label className="material-symbols-outlined vi-code-icon" htmlFor={props.title}>
           code
         </label>
       </> : ""

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=code');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import url('./vi-button.css');
 @import url('./vi-table.css');
+@import url('./vi-badge.css');
 
 
 * {
@@ -329,7 +330,7 @@ body {
     border-bottom: 1px solid var(--clr-8);
     box-shadow: 0px 2px 14px -10px var(--clr-9);
 
-    z-index: 2;
+    z-index: 99;
 
 }
 
@@ -385,7 +386,7 @@ div.accordian {
     position: relative;
 }
 
-.accordian input {
+.accordian .acc-toggle-checkbox {
     position: absolute;
     right: 18px;
     top: 8px;
@@ -395,14 +396,14 @@ div.accordian {
     visibility: 0;
 }
 
-.accordian label {
+.accordian label.vi-code-icon {
     position: absolute;
     right: 18px;
     top: 8px;
     cursor: pointer;
 }
 
-.accordian label:hover {
+.accordian label.vi-code-icon:hover {
     opacity: 0.7;
 }
 
@@ -413,6 +414,6 @@ div.accordian {
     transition: max-height 1s;
 }
 
-.accordian input:checked~.accordian-content {
+.accordian .acc-toggle-checkbox:checked~.accordian-content {
     max-height: 600px;
 }
