@@ -1,6 +1,8 @@
 let tAction = [
-         { "name": "Add" },{ "name": "Edit" },{ "name": "Delete" }
-       ]
-
+  { name: "Add" , key: "add"},
+  { name: "Edit" , key: "edit"},
+  { name: "Delete", key: "delete" },
+  { name: "Details", key: "detail" }
+]
 
 export default tAction

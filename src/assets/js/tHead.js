@@ -1,10 +1,12 @@
 let tHead = [
-    { name: "Home", path: "",  desc : "Home" },
-    { name: "Button", path: "button", desc : "Button"  },
-    { name: "Table", path: "table",  desc : "Table" },
-    { name: "Card", path: "card",  desc : "Card" },
-    { name: "Badge", path: "badge",  desc : "Badge" },
-    { name: "NoPage", path: "*",  desc : "NoPage" },
+    { name: "Id", index : "id", validation : { type : "number"}, style : {background : "red", color : "white"}  },
+    { name: "Image", index: "Image" , validation : { type : "image"} },
+    { name: "DOB", index: "birth", validation : { type : "date",input : "dd-mm-yy"}, style : {background : "red", color : "white"} },
+    { name: "Gender", index: "gender", validation : { type : 'boolean'}},
+    { name: "Email", index: "EMAIL" , validation : { type : "email"} },
+    { name: "Age", index: "age" , validation : { type : "number"} },
+    { name: "FirstNAme", index: "FirstNAme", validation : { type : "string"} },
+    { name: "Role", index: "role", validation : { type : "string"} }
 ]
 
 

@@ -20,7 +20,7 @@ const Layout = (props) => {
         <div >
             <h1 className="pageHead h-60" style={{ display: "flex" }}>
                 <div className="logo">
-                    <Link to='/'>VNI</Link>
+                    <Link to='/'>VAANI</Link>
                 </div>
                 <div className="right-menu" >
                 <select onChange={(e) => toggleColors(e)} value={setTheme}>
@@ -29,21 +29,22 @@ const Layout = (props) => {
                     <option value="blue">Blue</option>
                     <option value="orange">Orange</option>
                     <option value="yellow">Yellow</option>
+                    <option value="pink">Pink Vanni</option>
                     <option value="gray">Light</option>
                     <option value="black">Dark</option>
+                    <option value="white">White</option>
                     {/* <option value="white">White</option> */}
                 </select>
                   
                 </div>
 
             </h1>
-            <div className="sidenav">
+            {/* <div className="sidenav">
                 {MenuBar}
-            </div>
+            </div> */}
 
-            <div className="main">
+            <div className="main" style={{margin:0}}>
                 <div style={{ margin: "20px" }}>
-                     
                     <Outlet />
                 </div>
             </div>

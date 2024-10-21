@@ -7,9 +7,7 @@ const Table = () => {
 
   return (
     <>
-        <ComponentCard title="Multi Use Datatable">
-          <VITable  tableHead={tHead} tableBody={tBody} tableAction={tAction}/>
-        </ComponentCard>
+        <VITable  tableHead={tHead} tableBody={tBody} tableAction={tAction}/>
     </>
   )
 };

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Badge", {
+Object.defineProperty(exports, "VIBadge", {
   enumerable: true,
   get: function () {
     return _Badge.default;

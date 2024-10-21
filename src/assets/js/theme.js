@@ -13,15 +13,24 @@ let yellow = {
 let orange = {
     1: "#FFE0B2", 2: "#FFCC80", 3: "#FFB74D", 4: "#FFA726", 5: "#FF9800", 6: "#FB8C00", 7: "#F57C00", 8: "#EF6C00", 9: "#E65100",
 }
-let black = {
-    1: "#424242", 2: "#484848", 3: "#323232", 4: "#383838", 5: "#212121", 6: "#181818", 7: "#111111", 8: "#4e4e4e", 9: "#4b4b4b",
-}
+
 let gray = {
     1: "#212121", 2: "#424242", 3: "#616161", 4: "#757575", 5: "#9E9E9E", 6: "#BDBDBD", 7: "#E0E0E0", 8: "#adadad", 9: "#cacaca",
 }
-let white = {
-    0: "#FFFFFF", 1: "#FAFAFA", 2: "#F5F5F5", 3: "#EEEEEE",
+
+let pink = {
+    1: "#F8BBD0", 2: "#F48FB1", 3: "#F06292", 4: "#EC407A", 5: "#E91E63", 6: "#D81B60", 7: "#C2185B", 8: "#AD1457", 9: "#880E4F"
 }
+
+let black = {
+    1: "#000000", 2: "#000000", 3: "#000000", 4: "#000000", 5: "#000000", 6: "#000000", 7: "#000000", 8: "#000000", 9: "#000000",
+}
+
+let white = {
+    1: "#FFFFFF", 2: "#FFFFFF", 3: "#FFFFFF", 4: "#FFFFFF", 5: "#FFFFFF", 6: "#FFFFFF", 7: "#FFFFFF", 8: "#FFFFFF", 9: "#FFFFFF",
+}
+
+
 
 
 const theme = (themeColor) => {
@@ -37,7 +46,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', green['7']);
         root.style.setProperty('--clr-8', green['8']);
         root.style.setProperty('--clr-9', green['9']);
-        root.style.setProperty('--text-color', white[0]);
+        root.style.setProperty('--text-color', white[1]);
         localStorage.setItem("theme", "green");
     } else if (theme === "red") {
         root.style.setProperty('--clr-1', red['1']);
@@ -49,7 +58,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', red['7']);
         root.style.setProperty('--clr-8', red['8']);
         root.style.setProperty('--clr-9', red['9']);
-        root.style.setProperty('--text-color', white[0]);
+        root.style.setProperty('--text-color', white[1]);
         localStorage.setItem("theme", "red");
     } else if (theme === "blue") {
         root.style.setProperty('--clr-1', blue['1']);
@@ -61,7 +70,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', blue['7']);
         root.style.setProperty('--clr-8', blue['8']);
         root.style.setProperty('--clr-9', blue['9']);
-        root.style.setProperty('--text-color', white[0]);
+        root.style.setProperty('--text-color', white[1]);
         localStorage.setItem("theme", "blue");
     } else if (theme === "orange") {
         root.style.setProperty('--clr-1', orange['1']);
@@ -73,7 +82,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', orange['7']);
         root.style.setProperty('--clr-8', orange['8']);
         root.style.setProperty('--clr-9', orange['9']);
-        root.style.setProperty('--text-color', white[0]);
+        root.style.setProperty('--text-color', white[1]);
         localStorage.setItem("theme", "orange");
     } else if (theme === "yellow") {
         root.style.setProperty('--clr-1', yellow['1']);
@@ -85,8 +94,20 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', yellow['7']);
         root.style.setProperty('--clr-8', yellow['8']);
         root.style.setProperty('--clr-9', yellow['9']);
-        root.style.setProperty('--text-color', black[0]);
+        root.style.setProperty('--text-color', black[1]);
         localStorage.setItem("theme", "yellow");
+    } else if (theme === "pink") {
+        root.style.setProperty('--clr-1', pink['1']);
+        root.style.setProperty('--clr-2', pink['2']);
+        root.style.setProperty('--clr-3', pink['3']);
+        root.style.setProperty('--clr-4', pink['4']);
+        root.style.setProperty('--clr-5', pink['5']);
+        root.style.setProperty('--clr-6', pink['6']);
+        root.style.setProperty('--clr-7', pink['7']);
+        root.style.setProperty('--clr-8', pink['8']);
+        root.style.setProperty('--clr-9', pink['9']);
+        root.style.setProperty('--text-color', white[1]);
+        localStorage.setItem("theme", "pink");
     } else if (theme === "gray") {
         root.style.setProperty('--clr-1', gray['1']);
         root.style.setProperty('--clr-2', gray['2']);
@@ -109,7 +130,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', black['7']);
         root.style.setProperty('--clr-8', black['8']);
         root.style.setProperty('--clr-9', black['9']);
-        root.style.setProperty('--text-color', white[0]);
+        root.style.setProperty('--text-color', white[1]);
         localStorage.setItem("theme", 'black');
     } else if (theme === "white") {
         root.style.setProperty('--clr-1', white['1']);
@@ -121,7 +142,7 @@ const theme = (themeColor) => {
         root.style.setProperty('--clr-7', white['7']);
         root.style.setProperty('--clr-8', white['8']);
         root.style.setProperty('--clr-9', white['9']);
-        root.style.setProperty('--text-color', black[0]);
+        root.style.setProperty('--text-color', black[1]);
         localStorage.setItem("theme", "white");
     }
 
