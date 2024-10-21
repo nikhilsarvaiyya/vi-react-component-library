@@ -12,7 +12,27 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+81 965-431-3024",
-    "style": [{"name" : "gender", "style" : { "background" : "yellow"}}]
+    "cellStyle": [
+      {
+        "name": "gender",
+        "style": { "background": "blue" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+    "cellStyle": [
+      {
+        "name": "gender",
+        "style": { "background": "blue" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+    "rowStyle" : { "background" : "darkslategrey", "color":"white"}
   },
   {
     "id": 2,
@@ -26,11 +46,17 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+81 965-431-3024",
-    "styles": [
-      {"name" : "gender", "style" : { "background" : "yellow"}},
-      {"name" : "role", "style" : { "font-size" : "48px"}}
+    "cellStyle": [
+      {
+        "name": "gender",
+        "style": { "background": "blue", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
     ],
-    "rowStyle" : [{ "background" : "yellow"},{ "font-size" : "48px"}]
+    "rowStyle" : { "background" : "darkslategrey","color":"white"}
   },
   {
     "id": 3,
@@ -44,7 +70,16 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+81 210-652-2785",
-     "gender-bg":"red"
+"cellStyle": [
+      {
+        "name": "gender",
+        "style": {"background": "green", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
 
   },
   {
@@ -59,7 +94,17 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+49 614-958-9364",
-     "gender-bg":"green"
+"cellStyle": [
+      {
+        "name": "gender",
+        "style": {"background": "blue", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+
 
   },
   {
@@ -74,8 +119,18 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+91 759-776-1614",
-     "gender-bg":"red"
-
+    "cellStyle": [
+      {
+        "name": "gender",
+        "style": {"background": "green", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+    
+     "rowStyle" : { "background" : "darkslategrey","color":"white"}
   },
   {
     "id": 6,
@@ -89,7 +144,17 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+91 607-295-6448",
-     "gender-bg":"red"
+"cellStyle": [
+      {
+        "name": "gender",
+        "style": {"background": "green", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+
 
   },
   {
@@ -104,7 +169,17 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+61 260-824-4986",
-     "gender-bg":"green"
+"cellStyle": [
+      {
+        "name": "gender",
+        "style":{"background": "blue", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+
 
   },
   {
@@ -119,7 +194,17 @@ let tBody = [
     "role": "user",
     "image": "https://static.vecteezy.com/system/resources/previews/028/794/706/large_2x/cartoon-cute-school-boy-photo.jpg",
     "phone": "+1 458-853-7877",
-     "gender-bg":"red"
+  "cellStyle": [
+      {
+        "name": "gender",
+        "style": {"background": "green", "color" : "white" }
+      },
+      {
+        "name": "role",
+        "style": { "font-weight": "bold", "text-transform" : "uppercase" }
+      }
+    ],
+
   }
 ]
 

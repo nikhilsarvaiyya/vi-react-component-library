@@ -6,12 +6,14 @@ import ImageFormatter from '../../assets/js/ImageFormatter';
 function handleDropdown(event, a) {
     console.log(a)
     document.getElementById(a).classList.toggle("show");
+    //document.getElementById(a).classList.add('will-show');
     if (!event.target.matches('.' + a + '.dropbtn')) {
         var dropdowns = document.getElementsByClassName(a);
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
+                
                 openDropdown.classList.remove('show');
             }
         }
@@ -37,33 +39,33 @@ const manipulateData = (data, head) => {
 // TR Row Style
     let trStyle = {}
 
-    // let ifRowStyleAvailable = data?.length === 1 ? data[1].rowStyle : "NA"; 
-   
-    // if(ifRowStyleAvailable){
-    //      trStyle = ifRowStyleAvailable;
-    // }
+   let ifRowStyleAvailable = data?.filter((item,i) => item.rowStyle)[0]
+    if(ifRowStyleAvailable?.rowStyle){
+        trStyle = ifRowStyleAvailable?.rowStyle
+    }
+
 // TD Cell Style
     let tdStyle = {}
 
-    let isStyleAvailable = data?.filter((item,i) => {
-        return item?.styles?.map((m) => {
-            if(m.name == head.index){
-                return item?.styles?.style
+    let isStyleAvailable = data?.filter((item,i) => item.cellStyle)[0]
+    if(isStyleAvailable?.cellStyle){
+        isStyleAvailable?.cellStyle?.filter((cell,i) => {
+            if(cell.name == head.index) {
+                tdStyle = cell.style
             }
-         })
-    });
-    console.log(isStyleAvailable?.length !== 0 ? isStyleAvailable : "NA")
-    let commanStyle = isStyleAvailable?.length !== 0 ? isStyleAvailable['styles']?.filter((item,i) => {
-        console.log(item)
-    }) : [];
-    
-    if(commanStyle?.style){
-         tdStyle = commanStyle?.style;
+        });
+        
     }
-   
-   
     
-
+    // console.log(isStyleAvailable?.length !== 0 ? isStyleAvailable : "NA")
+    // let commanStyle = isStyleAvailable?.length !== 0 ? isStyleAvailable['styles']?.filter((item,i) => {
+    //     console.log(item)
+    // }) : [];
+    
+    // if(commanStyle?.style){
+    //      tdStyle = commanStyle?.style;
+    // }
+   
     switch (head?.validation?.type) {
         case 'number':
             localStyle = { textAlign: "right" }
@@ -88,7 +90,7 @@ const manipulateData = (data, head) => {
             break;
     }
 
-    return <td style={{... columnStyle, ...localStyle,  ...trStyle}}>{setValue}</td>
+    return <td style={{... columnStyle, ...localStyle,  ...trStyle, ...tdStyle}}>{setValue}</td>
 }
 
 let abc = (data) => data.map((thEntry, i) => {
@@ -121,14 +123,16 @@ const objTD = (entries, tableHead) => {
         tableHead.map((m, i) => {
             let checkKey = []
             Object.entries(entries).map((tdEntry, i) => {
+               
                 if (m?.index?.toLowerCase() == tdEntry[0]?.toLowerCase()) {
                     checkKey.push({ "key" : tdEntry[1]})
                 }
-                if (tdEntry[0]?.toLowerCase() == 'rowStyle') {
+                if (tdEntry[0]?.toLowerCase() == 'rowstyle') {
+                   
                     checkKey.push({ "rowStyle" : tdEntry[1]})
                 }
-                if (tdEntry[0]?.toLowerCase() == 'styles') {
-                    checkKey.push({ "styles" : tdEntry[1]})
+                if (tdEntry[0]?.toLowerCase() == 'cellstyle') {
+                    checkKey.push({ "cellStyle" : tdEntry[1]})
                 }
             })
           
@@ -206,11 +210,7 @@ const VITable = (props) => {
                     <td className="fixed-first" >
                         <input type='checkbox' checked={tr.checked} onChange={(e) => handleSingleCheckbox(e, i)} />
                     </td>
-                    {/* <td  >  
-                    <span style={{cursor:"pointer"}} className={`dropbtn B${i} material-symbols-outlined`} onClick={(e) => handleDropdown(e, "B" + i)}>
-                        description
-                    </span>
-                </td> */}
+                   
                     {objTD(tr, tableHead)}
 
                     {tableAction ?

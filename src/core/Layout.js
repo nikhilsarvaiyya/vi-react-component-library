@@ -20,7 +20,7 @@ const Layout = (props) => {
         <div >
             <h1 className="pageHead h-60" style={{ display: "flex" }}>
                 <div className="logo">
-                    <Link to='/'>VAANI</Link>
+                    <Link to='/'>VNI</Link>
                 </div>
                 <div className="right-menu" >
                 <select onChange={(e) => toggleColors(e)} value={setTheme}>
