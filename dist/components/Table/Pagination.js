@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Pagination = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 /* eslint-disable jsx-a11y/accessible-emoji */
 
 const Pagination = _ref => {
@@ -26,25 +28,25 @@ const Pagination = _ref => {
     setActivePage(1);
     setFilters({});
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", {
     className: "paginate-page"
-  }, "Page ", activePage, " of ", totalPages), /*#__PURE__*/React.createElement("p", {
+  }, "Page ", activePage, " of ", totalPages), /*#__PURE__*/_react.default.createElement("p", {
     className: "paginate-row"
-  }, "Rows: ", beginning === end ? end : `${beginning} - ${end}`, " of ", count), /*#__PURE__*/React.createElement("div", {
+  }, "Rows: ", beginning === end ? end : `${beginning} - ${end}`, " of ", count), /*#__PURE__*/_react.default.createElement("div", {
     className: "paginate-arrow"
-  }, /*#__PURE__*/React.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("button", {
     disabled: activePage === 1,
     onClick: () => setActivePage(1)
-  }, "First"), /*#__PURE__*/React.createElement("button", {
+  }, "First"), /*#__PURE__*/_react.default.createElement("button", {
     disabled: activePage === 1,
     onClick: () => setActivePage(activePage - 1)
-  }, "Previous"), /*#__PURE__*/React.createElement("button", {
+  }, "Previous"), /*#__PURE__*/_react.default.createElement("button", {
     disabled: activePage === totalPages,
     onClick: () => setActivePage(activePage + 1)
-  }, "Next"), /*#__PURE__*/React.createElement("button", {
+  }, "Next"), /*#__PURE__*/_react.default.createElement("button", {
     disabled: activePage === totalPages,
     onClick: () => setActivePage(totalPages)
-  }, "Last"), /*#__PURE__*/React.createElement("button", {
+  }, "Last"), /*#__PURE__*/_react.default.createElement("button", {
     onClick: clearAll
   }, "Clear all")));
 };

@@ -15,6 +15,8 @@ exports.isString = isString;
 exports.paginateRows = paginateRows;
 exports.sortRows = sortRows;
 exports.toLower = toLower;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 /* eslint-disable eqeqeq */
 
 function isEmpty() {

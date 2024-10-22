@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-
+import React from 'react'
 export const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActivePage, setSort, setFilters }) => {
     const beginning = activePage === 1 ? 1 : rowsPerPage * (activePage - 1) + 1
     const end = activePage === totalPages ? count : beginning + rowsPerPage - 1
