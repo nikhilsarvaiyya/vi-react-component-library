@@ -113,7 +113,6 @@ const VITable = _ref => {
   };
   let setSortColor = (row, column) => {
     if (sort.orderBy === column.accessor) {
-      console.log(column.accessor);
       row.sortColorClass = "sorting-color";
     } else {
       row.sortColorClass = "remove-sorting-color";
