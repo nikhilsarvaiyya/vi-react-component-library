@@ -1,9 +1,9 @@
-
-import Table from '../../pages/Table';
 import Button from '../../pages/Button';
 import NoPage from "../../pages/NoPage";
 import Badge from '../../pages/Badge';
 import Card from '../../pages/Card';
+import Table from "../../pages/Table"
+
 
 let menuJs = [
     { name: "Home", path: "", component: "Home", desc : "Home" },
