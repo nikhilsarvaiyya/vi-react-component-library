@@ -4,12 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Pagination = void 0;
-var _doubleRight = require("../../../assets/js/svg/double-right");
 /* eslint-disable jsx-a11y/accessible-emoji */
-
-// import SingleLeft from "../../../assets/js/svg/double-right";
-// import DoubleLeft from "../../../assets/js/svg/double-right";
-// import SingleRight from "../../../assets/js/svg/double-right";
 
 const Pagination = _ref => {
   let {
@@ -49,10 +44,7 @@ const Pagination = _ref => {
   }, "Next"), /*#__PURE__*/React.createElement("button", {
     disabled: activePage === totalPages,
     onClick: () => setActivePage(totalPages)
-  }, "Last ", /*#__PURE__*/React.createElement(_doubleRight.DoubleRight, {
-    fillColor: "green",
-    size: "14"
-  })), /*#__PURE__*/React.createElement("button", {
+  }, "Last"), /*#__PURE__*/React.createElement("button", {
     onClick: clearAll
   }, "Clear all")));
 };

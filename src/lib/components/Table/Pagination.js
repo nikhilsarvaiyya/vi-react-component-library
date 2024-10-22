@@ -1,12 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 
-// import SingleLeft from "../../../assets/js/svg/double-right";
-// import DoubleLeft from "../../../assets/js/svg/double-right";
-// import SingleRight from "../../../assets/js/svg/double-right";
-import {DoubleRight} from "../../../assets/js/svg/double-right";
-
-
-
 export const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActivePage, setSort, setFilters }) => {
     const beginning = activePage === 1 ? 1 : rowsPerPage * (activePage - 1) + 1
     const end = activePage === totalPages ? count : beginning + rowsPerPage - 1
@@ -37,7 +30,8 @@ export const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActi
             Next 
           </button>
           <button disabled={activePage === totalPages} onClick={() => setActivePage(totalPages)}>
-            Last <DoubleRight fillColor="green" size="14" />
+            Last 
+            {/* <DoubleRight fillColor="green" size="14" /> */}
           </button>
           <button onClick={clearAll}>Clear all</button>
         </div>
