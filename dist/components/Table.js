@@ -4,10 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
 var _helpers = require("./Table/helpers");
 var _Formatters = require("./Table/Formatters");
 var _Pagination = require("./Table/Pagination");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
 const VITable = _ref => {
   let {
     columns,
@@ -98,7 +100,7 @@ const VITable = _ref => {
     if (isStyleAvailable?.style) {
       tdStyle = isStyleAvailable?.style;
     }
-    return /*#__PURE__*/React.createElement("td", {
+    return /*#__PURE__*/_react.default.createElement("td", {
       className: `${row.sortColorClass}`,
       style: {
         ...localStyle,
@@ -117,70 +119,70 @@ const VITable = _ref => {
       row.sortColorClass = "remove-sorting-color";
     }
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "vi-table-header"
-  }, /*#__PURE__*/React.createElement("h1", null, "VNI Table"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "VNI Table"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", {
     onClick: () => alert("Download")
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "material-symbols-outlined "
-  }, " download ")), /*#__PURE__*/React.createElement("li", {
+  }, " download ")), /*#__PURE__*/_react.default.createElement("li", {
     onClick: () => alert("Upload")
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "material-symbols-outlined "
-  }, " upload ")), /*#__PURE__*/React.createElement("li", {
+  }, " upload ")), /*#__PURE__*/_react.default.createElement("li", {
     onClick: () => alert("Print")
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "material-symbols-outlined "
-  }, " print ")), /*#__PURE__*/React.createElement("li", {
+  }, " print ")), /*#__PURE__*/_react.default.createElement("li", {
     onClick: () => alert("Refresh")
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "material-symbols-outlined "
-  }, " refresh ")))), /*#__PURE__*/React.createElement("table", {
+  }, " refresh ")))), /*#__PURE__*/_react.default.createElement("table", {
     className: "vi-table"
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, columns.map((column, i) => {
+  }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, columns.map((column, i) => {
     if (column?.visible === false) {
       return;
     }
     const sortIcon = () => {
       if (column.accessor === sort.orderBy) {
         if (sort.order === 'asc') {
-          return /*#__PURE__*/React.createElement("h1", null, "\u2191 ");
+          return /*#__PURE__*/_react.default.createElement("h1", null, "\u2191 ");
         }
-        return /*#__PURE__*/React.createElement("h1", null, "\u2193 ");
+        return /*#__PURE__*/_react.default.createElement("h1", null, "\u2193 ");
       } else {
-        return /*#__PURE__*/React.createElement("h1", null, "\u2666 ");
+        return /*#__PURE__*/_react.default.createElement("h1", null, "\u2666 ");
       }
     };
-    return /*#__PURE__*/React.createElement("th", {
+    return /*#__PURE__*/_react.default.createElement("th", {
       key: column.accessor
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/_react.default.createElement("div", {
       style: {
         display: "flex"
       }
-    }, /*#__PURE__*/React.createElement("label", {
+    }, /*#__PURE__*/_react.default.createElement("label", {
       style: {
         flex: "auto",
         marginRight: "14px"
       }
-    }, column.label, " "), /*#__PURE__*/React.createElement("button", {
+    }, column.label, " "), /*#__PURE__*/_react.default.createElement("button", {
       className: "vi-icon-button",
       onClick: () => handleSort(column.accessor)
     }, sortIcon())));
-  })), /*#__PURE__*/React.createElement("tr", null, columns.map((column, i) => {
+  })), /*#__PURE__*/_react.default.createElement("tr", null, columns.map((column, i) => {
     if (column?.visible === false) {
       return;
     }
-    return /*#__PURE__*/React.createElement("th", {
+    return /*#__PURE__*/_react.default.createElement("th", {
       key: i
-    }, /*#__PURE__*/React.createElement("input", {
+    }, /*#__PURE__*/_react.default.createElement("input", {
       key: `${column.accessor}-search`,
       type: "search",
       placeholder: `Search ${column.label}`,
       value: filters[column.accessor],
       onChange: event => handleSearch(event.target.value, column.accessor)
     }));
-  }))), /*#__PURE__*/React.createElement("tbody", null, calculatedRows.map(row => {
-    return /*#__PURE__*/React.createElement("tr", {
+  }))), /*#__PURE__*/_react.default.createElement("tbody", null, calculatedRows.map(row => {
+    return /*#__PURE__*/_react.default.createElement("tr", {
       key: row.id
     }, columns.map(column => {
       if (column?.visible === false) {
@@ -189,13 +191,13 @@ const VITable = _ref => {
       setSortColor(row, column);
       return formatData(row[column.accessor], row, column);
     }));
-  }), count === 0 ? /*#__PURE__*/React.createElement("p", {
+  }), count === 0 ? /*#__PURE__*/_react.default.createElement("p", {
     style: {
       padding: "20px"
     }
-  }, "No data found") : "")), /*#__PURE__*/React.createElement("div", {
+  }, "No data found") : "")), /*#__PURE__*/_react.default.createElement("div", {
     className: "pagination"
-  }, count > 0 ? /*#__PURE__*/React.createElement(_Pagination.Pagination, {
+  }, count > 0 ? /*#__PURE__*/_react.default.createElement(_Pagination.Pagination, {
     activePage: activePage,
     count: count,
     rowsPerPage: rowsPerPage,
@@ -203,7 +205,7 @@ const VITable = _ref => {
     setActivePage: setActivePage,
     setSort: setSort,
     setFilters: setFilters
-  }) : /*#__PURE__*/React.createElement("button", {
+  }) : /*#__PURE__*/_react.default.createElement("button", {
     style: {
       float: "right"
     },
